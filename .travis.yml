@@ -10,7 +10,6 @@ cache:
   directories:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
-    - $HOME/.m2
 
 before_install:
   - chmod +x gradlew
@@ -24,6 +23,8 @@ before_script:
 
 script:
   - ./gradlew clean test
+  - export JAVA_HOME=$HOME/openjdk11
+  - $TRAVIS_BUILD_DIR/install-jdk.sh --install openjdk11 --target $JAVA_HOME
 
 notifications:
   email:
