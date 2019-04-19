@@ -2,6 +2,10 @@ language: java
 
 jdk:
   - openjdk11
+  - oraclejdk11
+#matrix:
+#  allow_failures:
+#    - jdk: openjdk-ea
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
@@ -13,6 +17,8 @@ cache:
 
 before_install:
   - chmod +x gradlew
+  - export JAVA_HOME=$HOME/openjdk11
+  - $TRAVIS_BUILD_DIR/install-jdk.sh --install openjdk11 --target $JAVA_HOME
 
 services:
 #  - docker
@@ -23,8 +29,6 @@ before_script:
 
 script:
   - ./gradlew clean test
-  - export JAVA_HOME=$HOME/openjdk11
-  - $TRAVIS_BUILD_DIR/install-jdk.sh --install openjdk11 --target $JAVA_HOME
 
 notifications:
   email:
