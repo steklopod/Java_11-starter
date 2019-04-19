@@ -1,1 +1,1 @@
-rootProject.name = "docker-visits"
+rootProject.name = "Java_11-starter"
