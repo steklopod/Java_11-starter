@@ -5,8 +5,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -14,8 +15,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@RestController
 @SpringBootApplication
+@EntityScan(basePackages = "steklopod.model")
+@EnableJpaRepositories(basePackages = "steklopod.repositories")
 public class Application {
     private static final Logger log = LoggerFactory.getLogger("application");
     private static final Map<String, AtomicInteger> visits = new HashMap<>();

@@ -13,6 +13,18 @@
 
 * Junit 5
 
+#### Запуск
+
+1. Создать БД:
+```sql
+CREATE DATABASE testdb;
+```
+
+2. С помощью `gradle`:
+
+```bash
+gradle -q
+```
 ___
 
 ## Docker Compose

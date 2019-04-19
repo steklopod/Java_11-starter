@@ -4,8 +4,26 @@ server:
 spring:
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
   datasource:
     password: postgres
     username: postgres
-    url: jdbc:postgresql://192.168.99.100:5432/testDB
+    url: jdbc:postgresql://192.168.99.100:5432/testdb
+
+swagger:
+  title: REST-Сервис
+  version: 0.0.1
+  description: Описание сервиса в разработке
+  contact:
+    mail: steklopod@gmail.com
+    url: http://doppo.io
+    name: Дмитрий Колтович
+
+#logging:
+#  level:
+#    org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl: ERROR

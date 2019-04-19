@@ -39,8 +39,9 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok")
 
     // Other
+    implementation("io.springfox:springfox-swagger-ui:2.9.2")
+    implementation("io.springfox:springfox-swagger2:2.9.2")
     implementation("org.jetbrains:annotations:17.0.0")
 }
-
 
 defaultTasks("clean", "build", "bootRun")
