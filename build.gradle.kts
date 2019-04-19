@@ -1,8 +1,8 @@
 plugins {
     java
-    id ("org.springframework.boot") version "2.1.4.RELEASE"
-    id ("io.spring.dependency-management") version "1.0.7.RELEASE"
-    id ("com.github.ben-manes.versions") version "0.21.0"
+    id("org.springframework.boot") version "2.1.4.RELEASE"
+    id("io.spring.dependency-management") version "1.0.7.RELEASE"
+    id("com.github.ben-manes.versions") version "0.21.0"
 }
 
 description = " Проект для быстрого старта с Java 11 "
@@ -28,12 +28,10 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 
     // Tests
-    testImplementation("org.springframework.boot:spring-boot-starter-test"){ exclude(module = "junit") }
-    testImplementation(
-            "org.junit.jupiter:junit-jupiter-api",
-            "io.github.benas:random-beans:3.9.0",
-            "io.github.glytching:junit-extensions:2.3.0"
-    )
+    testImplementation("org.springframework.boot:spring-boot-starter-test") { exclude(module = "junit") }
+    testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testImplementation("io.github.glytching:junit-extensions:2.3.0") // glytching.github.io/junit-extensions/
+    testImplementation("org.jeasy:easy-random:4.0.0.RC1")            // github.com/j-easy/easy-random/wiki
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 
     // Lombok
