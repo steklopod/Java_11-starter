@@ -24,8 +24,8 @@ dependencies {
     //DataBase
     implementation("com.h2database:h2")
     implementation("org.postgresql:postgresql:42.2.2")
-    implementation("org.liquibase:liquibase-core:3.6.3")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.liquibase:liquibase-core:3.6.3")
 
     // Tests
     testImplementation("org.springframework.boot:spring-boot-starter-test") { exclude(module = "junit") }
