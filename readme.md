@@ -13,8 +13,9 @@
 
 * Junit 5
 
+___
 
-### Docker Compose
+## Docker Compose
 
 ![alt text](https://github.com/steklopod/Docker_visits/blob/master/screenshots/compose.png "compose")
 
@@ -58,7 +59,7 @@ docker-compose down
 ```
 ___
 
-### Dockerfile 
+## Docker build/run 
 
 `Dockerfile` - это простой текстовый файл, содержащий команды, которые пользователь может вызвать для сборки изображения.
 
