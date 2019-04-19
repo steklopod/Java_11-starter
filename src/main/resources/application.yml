@@ -2,6 +2,13 @@ server:
   port: 8080
 
 spring:
+  datasource:
+    password: postgres
+    username: postgres
+    url: jdbc:postgresql://192.168.99.100:5432/testdb
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
   jpa:
     hibernate:
       ddl-auto: update
@@ -11,10 +18,6 @@ spring:
         jdbc:
           lob:
             non_contextual_creation: true
-  datasource:
-    password: postgres
-    username: postgres
-    url: jdbc:postgresql://192.168.99.100:5432/testdb
 
 swagger:
   title: REST-Сервис
@@ -24,3 +27,4 @@ swagger:
     mail: steklopod@gmail.com
     url: http://doppo.io
     name: Дмитрий Колтович
+

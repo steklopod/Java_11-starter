@@ -2,7 +2,7 @@ databaseChangeLog:
   - changeSet:
       id: 1
       author: steklopod
-      comment: "[user] table"
+      comment: "Создание таблицы `пользователь` [user]"
       changes:
         - createTable:
             tableName: user
@@ -20,18 +20,9 @@ databaseChangeLog:
               - column:
                   name: last_name
                   type: varchar(255)
-                  constraints:
-                    nullable: true
-  - changeSet:
-      id: 2
-      author: steklopod
-      changes:
-        - insert:
-            tableName: user
-            columns:
               - column:
-                  name: first_name
-                  value: Dima
+                  name: user_email
+                  type: varchar(255)
               - column:
-                  name: last_name
-                  value: Kaltovich
+                  name: phone
+                  type: varchar(255)

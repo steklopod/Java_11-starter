@@ -2,6 +2,7 @@ package steklopod.controllers;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.http.HttpStatus;
@@ -17,8 +18,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
+@Slf4j
 @RestController
-@Api(tags = {"Utils", "Лбщие"}, value = "Utils", description = "Rest API for utillity methods")
+@Api(tags = {"Utils", "Вспомогательные"}, value = "Utils", description = "Rest API for utility methods")
 public class UtilController {
 
     private static final Map<String, AtomicInteger> visits = new HashMap<>();
@@ -43,12 +45,15 @@ public class UtilController {
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ApiOperation(value = "Бросает ошибку", response = Exception.class)
     public val raiseError() {
-        throw new IllegalArgumentException("Упс. Ты получил ошибку.");
+        throw new IllegalArgumentException("Упс. Ты вызвал ошибку.");
     }
+
 
     @ExceptionHandler(IllegalArgumentException.class)
     @ResponseStatus(HttpStatus.CONFLICT)
     public String handleError(IllegalArgumentException e) {
+        log.info("Обработчик исключений вызван. ");
         return e.getMessage();
     }
+
 }
