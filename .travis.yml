@@ -1,7 +1,6 @@
 language: java
 
 jdk:
-  - openjdk11
   - oraclejdk11
 #matrix:
 #  allow_failures:
@@ -17,8 +16,8 @@ cache:
 
 before_install:
   - chmod +x gradlew
-  - export JAVA_HOME=$HOME/openjdk11
-  - $TRAVIS_BUILD_DIR/install-jdk.sh --install openjdk11 --target $JAVA_HOME
+#  - export JAVA_HOME=$HOME/openjdk11
+#  - $TRAVIS_BUILD_DIR/install-jdk.sh --install openjdk11 --target $JAVA_HOME
 
 services:
 #  - docker
