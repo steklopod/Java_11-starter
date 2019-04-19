@@ -1,6 +1,17 @@
-[![Build Status](https://travis-ci.com/steklopod/Java_11-starter.svg?branch=master)](https://travis-ci.com/steklopod/Java_11-starter)
-[![Inline docs](http://inch-ci.org/github/dwyl/hapi-auth-jwt2.svg?branch=master)](http://inch-ci.org/github/dwyl/hapi-auth-jwt2)
-## Java 11, Spring Boot 2, Gradle 5, Docker, Postgres, Travis.ci, Junit 5
+## Java 11 стартер
+[![Build Status](https://travis-ci.org/steklopod/Java_11-starter.svg?branch=master)](https://travis-ci.org/steklopod/Java_11-starter)
+
+* Spring Boot 2
+
+* Gradle 5
+
+* Docker
+
+* Postgres
+
+* Travis.ci
+
+* Junit 5
 
 
 ### Docker Compose
