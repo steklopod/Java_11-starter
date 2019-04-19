@@ -1,15 +1,16 @@
 plugins {
-    id "java"
-    id "org.springframework.boot" version "2.1.4.RELEASE"
-    id "io.spring.dependency-management" version "1.0.7.RELEASE"
-    id "com.github.ben-manes.versions" version "0.21.0"
+    java
+    id ("org.springframework.boot") version "2.1.4.RELEASE"
+    id ("io.spring.dependency-management") version "1.0.7.RELEASE"
+    id ("com.github.ben-manes.versions") version "0.21.0"
 }
 
-description = " Проект для быстрого старта с Docker "
+description = " Проект для быстрого старта с Java 11 "
 
-sourceCompatibility = 11
-targetCompatibility = 11
-
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
 repositories {
     mavenCentral()
     mavenLocal()
@@ -27,7 +28,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 
     // Tests
-    testImplementation("org.springframework.boot:spring-boot-starter-test") { exclude module: "junit" }
+    testImplementation("org.springframework.boot:spring-boot-starter-test"){ exclude(module = "junit") }
     testImplementation(
             "org.junit.jupiter:junit-jupiter-api",
             "io.github.benas:random-beans:3.9.0",
@@ -43,11 +44,5 @@ dependencies {
     implementation("org.jetbrains:annotations:17.0.0")
 }
 
-test {
-    useJUnitPlatform {
-        includeEngines "junit-jupiter"
-        excludeEngines "junit-vintage"
-    }
-}
 
-apply(from: "tasks.gradle")
+defaultTasks("clean", "build", "bootRun")
