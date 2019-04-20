@@ -9,13 +9,13 @@ databaseChangeLog:
             columns:
               - column:
                   name: first_name
-                  value: TestName
+                  value: ТестовоеИмя
               - column:
                   name: last_name
-                  value: TastLastname
+                  value: ТестоваяФамилия
               - column:
                   name: user_email
                   value: steklopod@gmail.com
               - column:
                   name: phone
-                  value: +7(916)483-18-17
+                  value: +7(916)483-18-18

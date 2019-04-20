@@ -2,7 +2,6 @@ package steklopod.controllers;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.http.HttpStatus;
@@ -18,7 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@Slf4j
+//@Slf4j
 @RestController
 @Api(tags = {"Utils", "Вспомогательные"}, value = "Utils", description = "Rest API for utility methods")
 public class UtilController {
@@ -52,7 +51,7 @@ public class UtilController {
     @ExceptionHandler(IllegalArgumentException.class)
     @ResponseStatus(HttpStatus.CONFLICT)
     public String handleError(IllegalArgumentException e) {
-        log.info("Обработчик исключений вызван. ");
+//        log.info("Обработчик исключений вызван. ");
         return e.getMessage();
     }
 
