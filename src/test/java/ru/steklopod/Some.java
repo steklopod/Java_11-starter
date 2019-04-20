@@ -1,4 +1,4 @@
-package steklopod;
+package ru.steklopod;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

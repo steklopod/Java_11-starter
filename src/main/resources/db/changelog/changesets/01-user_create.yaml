@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: 1
-      author: steklopod
+      author: ru.steklopod
       comment: "Создание таблицы `пользователь` [user]"
       changes:
         - createTable:

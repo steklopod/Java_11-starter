@@ -1,1 +1,1 @@
-rootProject.name = "Java_11-starter"
+rootProject.name = "starter"

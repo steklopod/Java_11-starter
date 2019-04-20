@@ -1,4 +1,4 @@
-package steklopod.controllers;
+package ru.steklopod.controllers;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import steklopod.model.User;
-import steklopod.repositories.UserRepository;
+import ru.steklopod.model.User;
+import ru.steklopod.repositories.UserRepository;
 
 import java.util.List;
 

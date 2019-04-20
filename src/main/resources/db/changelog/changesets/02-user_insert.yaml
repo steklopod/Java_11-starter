@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: 1
-      author: steklopod
+      author: ru.steklopod
       comment: "Вставка тестовых данных в таблицу `пользователь` [user]"
       changes:
         - insert:
@@ -15,7 +15,7 @@ databaseChangeLog:
                   value: ТестоваяФамилия
               - column:
                   name: user_email
-                  value: steklopod@gmail.com
+                  value: ru.steklopod@gmail.com
               - column:
                   name: phone
                   value: +7(916)483-18-18

@@ -9,9 +9,19 @@ plugins {
 description = " Проект для быстрого старта с Java 11 "
 
 java {
+//    sourceSets["main"].java {
+//        srcDir("src/java")
+//    }
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
 }
+
+//idea {
+//    module {
+//        jdkName = "11"
+//    }
+}
+
 
 repositories {
     mavenCentral()
@@ -38,7 +48,7 @@ dependencies {
 
     // Lombok
     compileOnly("org.projectlombok:lombok:1.18.6")
-    annotationProcessor("org.projectlombok:lombok:1.18.6")
+//    annotationProcessor("org.projectlombok:lombok:1.18.6")
 
     // Other
     implementation("io.springfox:springfox-swagger-ui:2.9.2")
@@ -47,3 +57,10 @@ dependencies {
 }
 
 defaultTasks("clean", "build", "bootRun")
+
+tasks {
+    getByName<Test>("test") {
+        useJUnitPlatform { includeEngines("junit-jupiter"); excludeEngines("junit-vintage") }
+    }
+
+}

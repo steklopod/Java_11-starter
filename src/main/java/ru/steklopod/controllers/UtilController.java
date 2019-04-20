@@ -1,4 +1,4 @@
-package steklopod.controllers;
+package ru.steklopod.controllers;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

@@ -1,4 +1,4 @@
-package steklopod.model;
+package ru.steklopod.model;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
